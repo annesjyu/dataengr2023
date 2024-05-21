@@ -6,6 +6,9 @@ def main():
     # Example of loading data and performing operations
     df = spark.read.csv('Sales.csv', header=True, inferSchema=True)
     print('Number of rows:', df.count())
+    print("Show:")
+    print(df.show())
+    
     spark.stop()
 
 if __name__ == '__main__':
