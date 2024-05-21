@@ -18,9 +18,7 @@ spark = (SparkSession.builder.appName("schema_example").getOrCreate())
 blogs_df = spark.createDataFrame(data, schema)
 
 # Show the DataFrame; it should reflect our table above
-blogs_df.show()
+print(blogs_df.show())
 
 # Print the schema used by Spark to process the DataFrame
 print(blogs_df.printSchema())
-
-print(blogs_df.)
