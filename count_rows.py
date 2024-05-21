@@ -2,6 +2,7 @@ from pyspark.sql import SparkSession
 
 def main():
     spark = SparkSession.builder \
+        .master("spark://59e885f319c2:7077")  # Set the master URL here \
         .appName("Spark Job to Count Records") \
         .getOrCreate()
 
